@@ -26,11 +26,6 @@ const Services = () => {
         {/* dark mode */}
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
-        <spane>
-          Lorem ispum is simpley dummy text of printing of printing Lorem
-          <br />
-          ispum is simpley dummy text of printing
-        </spane>
         <a href={Resume} download>
           <button className="button s-button">Download CV</button>
         </a>
@@ -72,7 +67,7 @@ const Services = () => {
             emoji={Humble}
             heading={"UI/UX"}
             detail={
-              "Lorem ispum dummy text are usually use in section where we need some random text"
+              "User interface design or user interface engineering is the design of user interfaces for machines and software, such as computers, home appliances"
             }
             color="rgba(252, 166, 31, 0.45)"
           />

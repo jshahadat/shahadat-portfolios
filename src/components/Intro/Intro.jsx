@@ -4,7 +4,7 @@ import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
 import boy from "../../img/boy.png";
 import glassesimoji from "../../img/glassesimoji.png";
-import thumbup from "../../img/thumbup.png";
+// import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
 import FloatinDiv from "../FloatingDiv/FloatingDiv";
 import Github from "../../img/github.png";
@@ -13,6 +13,7 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import Resume from './Update-Resume.pdf'
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -26,20 +27,19 @@ const Intro = () => {
       {/* left name side */}
       <div className="i-left">
         <div className="i-name">
-          {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
-          <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
+
+          <span style={{ color: darkMode ? "white" : "" }}>Hi! I Am</span>
+          <span>Shahadat Hossain</span>
+          <span style={{ color: darkMode ? "white" : "" }}>
+            Frontend Developer with high level of learning experience in web development.
           </span>
         </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
-        </Link>
+        <a href={Resume} download>
+          <button className="button s-button">Download CV</button>
+        </a>
         {/* social icons */}
         <div className="i-icons">
-          <img src={Github} alt="" />
+          <Link to="https://github.com/jshahadat" ><img src={Github} alt="" /></Link>
           <img src={LinkedIn} alt="" />
           <img src={Instagram} alt="" />
         </div>
@@ -48,7 +48,7 @@ const Intro = () => {
       <div className="i-right">
         <img src={Vector1} alt="" />
         <img src={Vector2} alt="" />
-        <img src={boy} alt="" />
+        <img src={boy} alt="" className="img" />
         {/* animation */}
         <motion.img
           initial={{ left: "-36%" }}
@@ -75,7 +75,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
+          {/* <FloatinDiv img={thumbup} text1="Best Design" text2="Award" /> */}
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
